@@ -5,7 +5,7 @@ class Portfolio extends Component {
 		return (
 
 		  <div className="w3-content w3-justify w3-text-grey w3-padding-64" id="portfolio">
-		    <h2 className="w3-text-light-grey">My Name</h2>
+		    <h2 className="w3-text-light-grey">About Me</h2>
 		    <hr style={{width:"200px"}} className="w3-opacity"></hr>
 		    <p>I will talk about myself for this portion of the view</p>
 		    <h3 className="w3-padding-16 w3-text-light-grey">My Skills</h3>
