@@ -4,6 +4,7 @@ import './App.css';
 import Home from './home.js';
 import Portfolio from './portfolio.js';
 import Contact from './contact.js';
+import Footer from './components/footer.js';
 
 class App extends Component {
   render() {
@@ -40,6 +41,7 @@ class App extends Component {
         <Home />
         <Portfolio />
         <Contact />
+        <Footer />
 
       </div>
     );
