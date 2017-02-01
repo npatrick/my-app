@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './home.js';
 import Portfolio from './portfolio.js';
+import Contact from './contact.js';
 
 class App extends Component {
   render() {
@@ -40,6 +41,7 @@ class App extends Component {
         </div>
         <Home />
         <Portfolio />
+        <Contact />
 
       </div>
     );
