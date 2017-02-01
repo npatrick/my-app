@@ -28,7 +28,7 @@ class Portfolio extends Component {
 		        Years of Experience
 		      </div>
 		      <div className="w3-quarter w3-section">
-		        <span className="w3-xlarge">4+</span><br />
+		        <span className="w3-xlarge">4</span><br />
 		        Projects Done
 		      </div>
 		      <div className="w3-quarter w3-section">
