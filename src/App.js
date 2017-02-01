@@ -1,18 +1,44 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Home from './home.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+
+        <nav className="w3-sidenav w3-center w3-small w3-hide-small">
+
+          <img src="/w3images/avatar_smoke.jpg" style={{width: "100%"}} alt="avatar" />
+            <a className="w3-padding-large w3-black" href="#">
+              <i className="fa fa-home w3-xxlarge"></i>
+              <p>HOME</p>
+            </a>
+            <a className="w3-padding-large w3-hover-black" href="#about">
+              <i className="fa fa-user w3-xxlarge"></i>
+              <p>ABOUT</p>
+            </a>
+            <a className="w3-padding-large w3-hover-black" href="#photos">
+              <i className="fa fa-eye w3-xxlarge"></i>
+              <p>PHOTOS</p>
+            </a>
+            <a className="w3-padding-large w3-hover-black" href="#contact">
+              <i className="fa fa-envelope w3-xxlarge"></i>
+              <p>CONTACT</p>
+            </a>
+        </nav>
+
+        <div className="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+          <ul className="w3-navbar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <li className="w3-left" style={{width:"25% !important"}}><a href="#">HOME</a></li>
+            <li className="w3-left" style={{width:"25% !important"}}><a href="#about">ABOUT</a></li>
+            <li className="w3-left" style={{width:"25% !important"}}><a href="#photos">PHOTOS</a></li>
+            <li className="w3-left" style={{width:"25% !important"}}><a href="#contact">CONTACT</a></li>
+          </ul>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Home />
+
       </div>
     );
   }
