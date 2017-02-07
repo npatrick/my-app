@@ -8,13 +8,10 @@ class Footer extends Component {
 		    	<i className="fa fa-linkedin w3-hover-text-indigo"></i>
 		    </a>
 		    <a href="https://github.com/npatrick" target="_blank">
-		    	<i className="fa fa-github w3-hover-text-purple"></i>
+		    	<i className="fa fa-github w3-hover-text-light-blue"></i>
 		    </a>
-		    <a href="">
+		    <a href="https://www.facebook.com/npromana" target="_blank">
 		    	<i className="fa fa-facebook-official w3-hover-text-indigo"></i>
-		    </a>
-		    <a href="">
-		    	<i className="fa fa-twitter w3-hover-text-light-blue"></i>
 		    </a>
 		  </footer>
 		);

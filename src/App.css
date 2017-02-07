@@ -31,6 +31,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   margin-left: 120px
 }
 
+.w3-container.w3-padding-32.w3-center {
+  background-color: rgb(163, 169, 165);
+}
+
 body {
   background-color: rgb(163, 169, 165);
 }
