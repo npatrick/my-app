@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 class Portfolio extends Component {
 	render() {
+		const dlResume = () => {
+			return window.open('https://s3-us-west-1.amazonaws.com/nprwebsitefiles/Patrick+Romana.pdf');
+		}
+
 		return (
 
 		  <div className="w3-content w3-justify w3-text-grey w3-padding-64" id="portfolio">
@@ -41,7 +45,7 @@ class Portfolio extends Component {
 		      </div>
 		    </div>
 
-		    <button className="w3-btn w3-light-grey w3-padding-large w3-section w3-hover-grey">
+		    <button className="w3-btn w3-light-grey w3-padding-large w3-section w3-hover-grey" type="button" onClick={dlResume}>
 		      <i className="fa fa-download"></i> Download Resume
 		    </button>
 		  </div>
