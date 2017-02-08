@@ -13,11 +13,11 @@ class Contact extends Component {
 		    </div><br />
 		    <p>Lets get in touch. Send me a message:</p>
 
-		    <form action="form.asp" target="_blank">
-		      <p><input className="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name" /></p>
-		      <p><input className="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email" /></p>
-		      <p><input className="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject" /></p>
-		      <p><input className="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message" /></p>
+		    <form action="https://script.google.com/macros/s/AKfycbyR6iN1Zk--vn2Wn8xUcJrCRHSXy4GGhPdypaEJ20IraYFzsCk/exec" method="POST" target="_blank">
+		      <p><input className="w3-input w3-padding-16" type="text" required placeholder="Name" name="name" /></p>
+		      <p><input className="w3-input w3-padding-16" type="text" required placeholder="Email" name="email" /></p>
+		      <p><input className="w3-input w3-padding-16" type="text" required placeholder="Subject" name="subject" /></p>
+		      <p><input className="w3-input w3-padding-16" type="text" required placeholder="Message" name="message" /></p>
 		      <p>
 		        <button className="w3-btn w3-light-grey w3-padding-large" type="submit">
 		          <i className="fa fa-paper-plane"></i> SEND MESSAGE
