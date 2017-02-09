@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Footer extends Component {
+export default class Footer extends Component {
 	render() {
 		return (
 			<footer className="w3-content w3-padding-medium w3-text-grey w3-xlarge">
@@ -16,6 +16,4 @@ class Footer extends Component {
 		  </footer>
 		);
 	}
-}
-
-export default Footer;
+};

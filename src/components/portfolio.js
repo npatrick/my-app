@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-class Portfolio extends Component {
+export default class Portfolio extends Component {
 	render() {
-		// wrapping the open link fn prevents popup blocking of resume
+		// wrapping the open link fn prevents popup blocking off resume
 		const dlResume = () => {
 			return window.open('https://s3-us-west-1.amazonaws.com/nprwebsitefiles/Patrick+Romana.pdf');
 		}
@@ -52,6 +52,4 @@ class Portfolio extends Component {
 		  </div>
 		);
 	}
-}
-
-export default Portfolio;
+};

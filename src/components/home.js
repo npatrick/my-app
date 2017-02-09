@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import selfpic from '../assets/selfpic.JPG';
 
-class Home extends Component {
+export default class Home extends Component {
 	render() {
 		return (
 			<header className="w3-container w3-padding-32 w3-center" id="home">
@@ -12,6 +12,4 @@ class Home extends Component {
 		  </header>
 		);
 	}
-}
-
-export default Home;
+};
