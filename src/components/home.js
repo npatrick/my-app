@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import selfpic from './assets/selfpic.JPG';
+import selfpic from '../assets/selfpic.JPG';
 
 class Home extends Component {
 	render() {

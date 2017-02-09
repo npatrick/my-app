@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Home from './home.js';
-import Portfolio from './portfolio.js';
-import Contact from './contact.js';
+import Home from './components/home.js';
+import Portfolio from './components/portfolio.js';
+import Contact from './components/contact.js';
 import Footer from './components/footer.js';
 
 class App extends Component {

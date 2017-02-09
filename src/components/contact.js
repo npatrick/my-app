@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class Contact extends Component {
 	render() {
+
 		return (
 			<div className="w3-padding-64 w3-content w3-text-grey" id="contact">
 		    <h2 className="w3-text-light-grey">Contact Me</h2>
