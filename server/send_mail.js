@@ -1,51 +1,24 @@
-var fs = require('fs');
-var googleAuth = require('google-auth-library');
-var google = require('googleapis');
+const fs = require('fs');
+const google = require('googleapis');
 
-function getOAuth2Client(cb) {
-  // Load client secrets
-  fs.readFile('client_secret.json', function(err, data) {
-    if (err) {
-      return cb(err);
-    }
-    var credentials = JSON.parse(data);
-    var clientSecret = credentials.installed.client_secret;
-    var clientId = credentials.installed.client_id;
-    var redirectUrl = credentials.installed.redirect_uris[0];
-    var auth = new googleAuth();
-    var oauth2Client = new auth.OAuth2(clientId, clientSecret, redirectUrl);
+module.exports = function sendMail(name, emailAddress, subject, msg, auth, cb) {
+  const gmailClass = google.gmail('v1');
 
-    // Load credentials
-    fs.readFile('gmail-credentials.json', function(err, token) {
-      if (err) {
-        return cb(err);
-      } else {
-        oauth2Client.credentials = JSON.parse(token);
-        return cb(null, oauth2Client);
-      }
-    });
-  });
-};
-
-function sendSampleMail(auth, cb) {
-  var gmailClass = google.gmail('v1');
-
-  var email_lines = [];
+  let email_lines = [];
 
   email_lines.push('From: "www.neilromana.com" <npatrick.romana@gmail.com>');
   email_lines.push('To: npatrick.romana@gmail.com');
   email_lines.push('Content-type: text/html;charset=iso-8859-1');
   email_lines.push('MIME-Version: 1.0');
-  email_lines.push('Subject: ' + 'fill_in_subject');
+  email_lines.push('Subject: ' + subject);
   email_lines.push('');
-  email_lines.push('<b>Name</b>: ' + 'fill_in_name' + '<br/>');
-  email_lines.push('<b>Email</b>: ' + 'fill_in_email' + '<br/><br/>');
-  email_lines.push('And this would be the content.<br/>');
-  email_lines.push('The body is in HTML so <b>we could even use bold</b>');
+  email_lines.push('<b>Name</b>: ' + name + '<br/>');
+  email_lines.push('<b>Email</b>: ' + emailAddress + '<br/><br/>');
+  email_lines.push(msg);
 
-  var email = email_lines.join('\r\n').trim();
+  let email = email_lines.join('\r\n').trim();
 
-  var base64EncodedEmail = new Buffer(email).toString('base64');
+  let base64EncodedEmail = new Buffer(email).toString('base64');
   base64EncodedEmail = base64EncodedEmail.replace(/\+/g, '-').replace(/\//g, '_');
 
   gmailClass.users.messages.send({
@@ -56,17 +29,3 @@ function sendSampleMail(auth, cb) {
     }
   }, cb);
 };
-
-getOAuth2Client(function(err, oauth2Client) {
-  if (err) {
-    console.log('err:', err);
-  } else {
-    sendSampleMail(oauth2Client, function(err, results) {
-      if (err) {
-        console.log('err:', err);
-      } else {
-        console.log(results);
-      }
-    });
-  }
-});
