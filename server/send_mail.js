@@ -32,12 +32,14 @@ function sendSampleMail(auth, cb) {
 
   var email_lines = [];
 
-  email_lines.push('From: "test" <npatrick.romana@gmail.com>');
+  email_lines.push('From: "www.neilromana.com" <npatrick.romana@gmail.com>');
   email_lines.push('To: npatrick.romana@gmail.com');
   email_lines.push('Content-type: text/html;charset=iso-8859-1');
   email_lines.push('MIME-Version: 1.0');
-  email_lines.push('Subject: this would be the subject');
+  email_lines.push('Subject: ' + 'fill_in_subject');
   email_lines.push('');
+  email_lines.push('<b>Name</b>: ' + 'fill_in_name' + '<br/>');
+  email_lines.push('<b>Email</b>: ' + 'fill_in_email' + '<br/><br/>');
   email_lines.push('And this would be the content.<br/>');
   email_lines.push('The body is in HTML so <b>we could even use bold</b>');
 
