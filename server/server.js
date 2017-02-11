@@ -15,6 +15,9 @@ const port = 3001;
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
-app.post('/sendemail', (req, res) => res.send('Message Sent!'));
+app.post('/sendemail', (req, res) => {
+	console.log('POST COMING: ', req.body);
+	res.status(req.body ? 200 : 500).send('Message Sent!');
+});
 
 app.listen(port, () => console.log('Listening on port 3001!'));
