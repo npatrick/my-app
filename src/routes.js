@@ -10,7 +10,7 @@ import Footer from './components/footer.js';
 
 export default (
   <Route path="/" component={App} >
-    <IndexRoute components={ {main: Home, navigation: Navigation, footer: Footer } } />
+    <IndexRoute components={ {main: Home, navigation: Navigation, footer: Footer} } />
     <Route path="/portfolio" components={ {main: Portfolio, navigation: Navigation, footer: Footer} } />
     <Route path="/contact" components={ {main: Contact, navigation: Navigation, footer: Footer} } />
   </Route>
