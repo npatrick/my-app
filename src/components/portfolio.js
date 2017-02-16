@@ -12,7 +12,7 @@ export default class Portfolio extends Component {
 		  <div className="w3-content w3-justify w3-text-grey w3-padding-64" id="portfolio">
 		    <h2 className="w3-text-light-grey">About Me</h2>
 		    <hr style={{width:"200px"}} className="w3-opacity"></hr>
-		    <p>My name's Neil but most of my friends call me Nicko. I love to construct applications that caters to user needs and wants. While I'm away from coding, I get off the grid to explore and seek great vistas through long backpacking, hiking, and camping trips. As for now, I'm excited to contribute to a company that solves user dilemmas and that of which makes a greater impact on the society.</p>
+		    <p>My name's Neil, but most of my friends call me Nicko. I love to construct applications that caters to user needs and wants. While I'm away from coding, I get off the grid to explore and seek great vistas through long backpacking, hiking, and camping trips. As for now, I'm excited to contribute to a company that solves user dilemmas and that of which makes a greater impact on the society.</p>
 		    <h3 className="w3-padding-16 w3-text-light-grey">My Skills</h3>
 		    <p className="w3-wide">JavaScript</p>
 		    <div className="w3-progress-container">
