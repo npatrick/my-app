@@ -44,7 +44,9 @@ export default class Portfolio extends Component {
 
 		    <h3 className="w3-padding-16 w3-text-light-grey">Projects</h3>
 				<div className="project1">
-				<p className="w3-padding-4">TrueScore</p>
+				<a href="https://true-score.herokuapp.com" target="_blank">
+					<p className="w3-padding-4">TrueScore</p>
+				</a>
 					<img src={truescore} alt="truescore" style={{maxWidth:"50%", maxHeight:"50%"}} />
 		    <p className="w3-padding-4">songspace</p>
 					<img src={songspace} alt="songspace" style={{maxWidth:"50%", maxHeight:"50%"}} />
