@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Footer extends Component {
 	render() {
 		return (
-			<footer className="w3-content w3-padding-medium w3-text-grey w3-xlarge">
+			<footer className="w3-content w3-padding-medium w3-text-grey w3-xlarge w3-center">
 		    <a href="https://www.linkedin.com/in/neilromana/" target="_blank">
 		    	<i className="fa fa-linkedin w3-hover-text-indigo"></i>
 		    </a>
