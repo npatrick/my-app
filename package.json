@@ -5,6 +5,7 @@
   "devDependencies": {
     "react-scripts": "0.8.5"
   },
+  "homepage": "http://www.neilromana.com",
   "dependencies": {
     "body-parser": "^1.16.1",
     "google-auth-library": "^0.10.0",
