@@ -1,7 +1,31 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 export default class Contact extends Component {
 	render() {
+		const handleClick = (event) => {
+			event.preventDefault();
+
+			let formValue = document.getElementById('contact-form');
+			let data = {
+				name: formValue.elements['name'].value,
+				email: formValue.elements['email'].value,
+				subject: formValue.elements['subject'].value,
+				message: formValue.elements['message'].value
+			}
+
+			$.ajax({
+				type: 'POST',
+				url: '/sendemail',
+				data: data
+			})
+			.done(data => {
+				console.log('Sent!');
+				document.getElementById('contact-form').reset();
+			})
+			.fail(err => console.log('error: ', err));
+		};
+
 		return (
 			<div className="w3-padding-64 w3-content w3-text-grey" id="contact">
 		    <h2 className="w3-text-light-grey">Contact Me</h2>
@@ -13,7 +37,7 @@ export default class Contact extends Component {
 		    </div><br />
 		    <p>Lets get in touch. Send me a message:</p>
 
-		    <form action="/sendemail" method="POST">
+		    <form id="contact-form" onSubmit={handleClick}>
 		      <p><input className="w3-input w3-padding-16" type="text" required placeholder="Name" name="name" /></p>
 		      <p><input className="w3-input w3-padding-16" type="text" required placeholder="Email" name="email" /></p>
 		      <p><input className="w3-input w3-padding-16" type="text" required placeholder="Subject" name="subject" /></p>

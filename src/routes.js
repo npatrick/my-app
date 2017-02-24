@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Route, IndexRoute, Redirect } from 'react-router';
 
 import App from './App.js';
 import Navigation from './components/navigation.js';
@@ -13,5 +13,6 @@ export default (
     <IndexRoute components={ {main: Home, navigation: Navigation, footer: Footer} } />
     <Route path="/portfolio" components={ {main: Portfolio, navigation: Navigation, footer: Footer} } />
     <Route path="/contact" components={ {main: Contact, navigation: Navigation, footer: Footer} } />
+    <Redirect from="/sendemail" to="/contact" />
   </Route>
 );
