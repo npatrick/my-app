@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, '../build')));
 
-const port = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../build', 'index.html')));
 
@@ -43,4 +43,4 @@ app.post('/sendemail', (req, res) => {
 	res.status(req.body ? 200 : 500).send('Message Sent!');
 });
 
-app.listen(port, () => console.log('Listening on port 3001!'));
+app.listen(PORT, () => console.log('Listening on PORT 3001!'));
