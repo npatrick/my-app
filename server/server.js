@@ -1,9 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const http = require('http');
 
 // Create the Express application:
 const app = express();
+
 
 // requirements for sending email function
 const getOAuth2Client = require('./getoauth2client.js');
@@ -42,5 +44,8 @@ app.post('/sendemail', (req, res) => {
 
 	res.status(req.body ? 200 : 500).send('Message Sent!');
 });
+
+// pings the app every 5 mins
+setInterval(() => http.get('http://www.neilromana.com'), 300000);
 
 app.listen(PORT, () => console.log('Listening on PORT 3001!'));
