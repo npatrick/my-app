@@ -2,7 +2,37 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 
 export default class Contact extends Component {
-  state = { name: '', sent: false, action: ' Send Message' };
+  state = { 
+    name: '',
+    email: '',
+    subject: '',
+    message: '', 
+    action: ' Send Message' 
+  };
+
+  handleClick(event) {
+    const that = this;
+    event.preventDefault();
+
+    let data = {
+      name: this.state.name,
+      email: this.state.email,
+      subject: this.state.subject,
+      message: this.state.message
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: '/sendemail',
+      data: data
+    })
+    .done(data => {
+      console.log('Sent!');
+      document.getElementById('contact-form').reset();
+      that.setState({ action: ' Sent!' });
+    })
+    .fail(err => console.log('error: ', err));
+  }
 
   renderButton() {
     return (
@@ -13,31 +43,6 @@ export default class Contact extends Component {
   }
 
   render() {
-    const that = this;
-    const handleClick = (event) => {
-      event.preventDefault();
-      
-      let formValue = document.getElementById('contact-form');
-      let data = {
-        name: formValue.elements['name'].value,
-        email: formValue.elements['email'].value,
-        subject: formValue.elements['subject'].value,
-        message: formValue.elements['message'].value
-      }
-
-      $.ajax({
-        type: 'POST',
-        url: '/sendemail',
-        data: data
-      })
-      .done(data => {
-        console.log('Sent!');
-        document.getElementById('contact-form').reset();
-        that.setState({ sent: true, action: ' Sent!' });
-      })
-      .fail(err => console.log('error: ', err));
-    };
-
     return (
       <div className="w3-padding-64 w3-content w3-text-grey" id="contact">
         <h2 className="w3-text-light-grey">Contact Me</h2>
@@ -49,17 +54,13 @@ export default class Contact extends Component {
         </div><br />
         <p>Lets get in touch. Send me a message:</p>
 
-        <form id="contact-form" onSubmit={handleClick}>
-          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Name" name="name" 
-            onChange={name => this.setState({ 
-              name: name, 
-              sent: false, 
-              action: ' Send Message' })
-          }/>
+        <form id="contact-form" onSubmit={this.handleClick.bind(this)}>
+          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Name" 
+            onChange={name => this.setState({ name: name.target.value, action: ' Send Message' })} />
           </p>
-          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Email" name="email" /></p>
-          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Subject" name="subject" /></p>
-          <p><textarea className="w3-input w3-padding-16" type="text" required placeholder="Message" name="message" /></p>
+          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Email" onChange={email => this.setState({ email: email.target.value, action: ' Send Message' })} /></p>
+          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Subject" onChange={subject => this.setState({ subject: subject.target.value, action: ' Send Message' })} /></p>
+          <p><textarea className="w3-input w3-padding-16" type="text" required placeholder="Message" onChange={message => this.setState({ message: message.target.value, action: ' Send Message' })} /></p>
           <p>{this.renderButton()}</p>
         </form>
       </div>
