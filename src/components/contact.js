@@ -6,17 +6,17 @@ export default class Contact extends Component {
 
   renderButton() {
     return (
-      <button className="w3-btn w3-light-grey w3-padding-large" type="submit">
+      <button className="w3-btn w3-light-grey w3-padding-large">
         <i className="fa fa-paper-plane"></i>{this.state.action}
       </button>
-    );
+    )
   }
 
   render() {
     const that = this;
     const handleClick = (event) => {
       event.preventDefault();
-
+      
       let formValue = document.getElementById('contact-form');
       let data = {
         name: formValue.elements['name'].value,
@@ -59,10 +59,8 @@ export default class Contact extends Component {
           </p>
           <p><input className="w3-input w3-padding-16" type="text" required placeholder="Email" name="email" /></p>
           <p><input className="w3-input w3-padding-16" type="text" required placeholder="Subject" name="subject" /></p>
-          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Message" name="message" /></p>
-          <p>
-            {this.renderButton()}
-          </p>
+          <p><textarea className="w3-input w3-padding-16" type="text" required placeholder="Message" name="message" /></p>
+          <p>{this.renderButton()}</p>
         </form>
       </div>
     );
