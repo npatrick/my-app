@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import Recaptcha from 'react-recaptcha'
 
 export default class Contact extends Component {
   state = { 
@@ -13,6 +14,10 @@ export default class Contact extends Component {
   validateEmail(email) {
     const reg =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return reg.test(email);
+  }
+
+  callback() {
+    console.log('Dependencies Loaded!');
   }
 
   handleSubmit(event) {
@@ -81,6 +86,8 @@ export default class Contact extends Component {
           <p><input className="w3-input w3-padding-16" type="text" required placeholder="Subject *" onChange={subject => this.setState({ subject: subject.target.value, action: ' Send Message' })} /></p>
           <p><textarea className="w3-input w3-padding-16" type="text" required placeholder="Message *" onChange={message => this.setState({ message: message.target.value, action: ' Send Message' })} /></p>
           <p> * required field</p>
+          <Recaptcha
+            sitekey="6LfonRcUAAAAADosbQ1kqVRDPbzgkgF4kHesE0nz" render="explicit" onloadCallback={this.callback} />
           <p>{this.renderButton()}</p>
         </form>
       </div>
