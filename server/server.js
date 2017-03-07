@@ -70,7 +70,7 @@ app.post('/sendemail', (req, res) => {
 	res.status(req.body ? 200 : 500).send('Message Sent!');
 });
 
-// pings the app every 5 mins
-setInterval(() => http.get('http://www.neilromana.com'), 300000);
+// pings the app every 15 mins
+setInterval(() => http.get('http://www.neilromana.com'), 900000);
 
 app.listen(PORT, () => console.log('Listening on PORT 3001!'));
