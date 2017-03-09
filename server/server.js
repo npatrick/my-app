@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const http = require('http');
-const Recaptcha = require('recaptcha');
+const Recaptcha = require('react-recaptcha');
 
 const recaptcha = new Recaptcha({
 	secret: 'SECRET_KEY',
