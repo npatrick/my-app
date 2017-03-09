@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import selfpic from '../assets/selfpic.JPG';
 
 export default class Home extends Component {
 	render() {
