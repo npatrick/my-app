@@ -1,0 +1,50 @@
+/*////////////////////////
+
+  Styling template
+
+/////////////////////////
+ */
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif; }
+
+.w3-row-padding img {
+  margin-bottom: 12px; }
+
+/* Set the width of the sidenav to 120px */
+.w3-sidenav {
+  width: 120px;
+  background: #fff; }
+
+/* Add a left margin to the "page content" that matches the width of the sidenav (120px) */
+#main {
+  margin-left: 120px; }
+
+.w3-container.w3-padding-32.w3-center {
+  background-color: #a3a9a5; }
+
+body {
+  background-color: #a3a9a5; }
+
+.skillList {
+  list-style-type: none; }
+
+/* Footer images */
+i.fa.fa-linkedin {
+  padding: 6px; }
+
+i.fa.fa-facebook-official {
+  padding: 6px; }
+
+i.fa.fa-github {
+  padding: 6px; }
+
+i.fa.fa-twitter {
+  padding: 6px; }
+
+.w3-left {
+  display: inline; }
+
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0; } }
