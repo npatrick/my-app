@@ -60,37 +60,61 @@ export default class Contact extends Component {
   // render based of action state
   renderButton() {
     return (
-      <button className="w3-btn w3-light-grey w3-padding-large">
-        <i className="fa fa-paper-plane"></i>{this.state.action}
+      <button type="submit" className="btn btn-block btn-custom-2 wow fadeInUp" data-wow-delay=".3s">{this.state.action}
       </button>
     )
   }
 
   render() {
     return (
-      <div className="w3-padding-64 w3-content w3-text-grey" id="contact">
-        <h2 className="w3-text-light-grey">Contact Me</h2>
-        <hr style={{width:"200px"}} className="w3-opacity"></hr>
-        <div className="w3-section">
-          <p><i className="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> San Francisco, US</p>
-          <p><i className="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: (310) 259 6041</p>
-          <p><i className="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: npatrick.romana@gmail.com</p>
-        </div><br />
-        <p>Lets get in touch. Send me a message:</p>
+      <section id="contact" class="module">
+        <div class="container">
+          <div class="row">
 
-        <form id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
-          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Name *" 
-            onChange={name => this.setState({ name: name.target.value, action: ' Send Message' })} />
-          </p>
-          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Email *" onChange={email => this.setState({ email: email.target.value, action: ' Send Message' })} /></p>
-          <p><input className="w3-input w3-padding-16" type="text" required placeholder="Subject *" onChange={subject => this.setState({ subject: subject.target.value, action: ' Send Message' })} /></p>
-          <p><textarea className="w3-input w3-padding-16" type="text" required placeholder="Message *" onChange={message => this.setState({ message: message.target.value, action: ' Send Message' })} /></p>
-          <p> * required field</p>
-          <Recaptcha
-            sitekey="6LfonRcUAAAAADosbQ1kqVRDPbzgkgF4kHesE0nz" render="explicit" onloadCallback={this.callback} />
-          <p>{this.renderButton()}</p>
-        </form>
-      </div>
+            <div class="col-sm-6 col-sm-offset-3">
+
+              <div class="module-header">
+                <h2 class="module-title">Contact</h2>
+                <div class="module-line"></div>
+                <div class="module-subtitle">
+                  Let's get in touch. Send me a message.
+                </div>
+                <div class="module-line"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-sm-6 col-sm-offset-3">
+
+              <form id="contact-form" role="form" onSubmit={this.handleSubmit.bind(this)}>
+                <div class="form-group wow fadeInUp">
+                  <label class="sr-only" for="c_name">Name</label>
+                  <input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name" onChange={name => this.setState({ name: name.target.value, action: ' Send Message' })} />
+                </div>
+
+                <div class="form-group wow fadeInUp" data-wow-delay=".1s">
+                  <label class="sr-only" for="c_email">Email address</label>
+                  <input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail" onChange={email => this.setState({ email: email.target.value, action: ' Send Message' })} />
+                </div>
+
+                <div class="form-group wow fadeInUp" data-wow-delay=".1s">
+                  <label class="sr-only" for="c_email">Subject</label>
+                  <input type="email" id="c_email" class="form-control" name="c_email" placeholder="Subject" onChange={subject => this.setState({ subject: subject.target.value, action: ' Send Message' })} />
+                </div>
+
+                <div class="form-group wow fadeInUp" data-wow-delay=".2s">
+                  <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message" onChange={message => this.setState({ message: message.target.value, action: ' Send Message' })} />
+                </div>
+                <p>{this.renderButton()}</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     );
   }
 };
