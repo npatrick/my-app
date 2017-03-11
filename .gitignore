@@ -16,5 +16,3 @@ my-app.git
 npm-debug.log
 
 # API
-client_secret.json
-gmail-credentials.json
