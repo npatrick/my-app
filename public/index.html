@@ -1,24 +1,460 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon1.ico">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <title>Neil's Website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="%PUBLIC_URL%/assets/js/jquery-1.11.1.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/imagesloaded.pkgd.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/jquery.shuffle.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/twitterFetcher.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/owl.carousel.min.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/jquery.fitvids.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/jquery.sticky.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/smoothscroll.js"></script>
-    <script src="%PUBLIC_URL%/assets/js/wow.min.js"></script>
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+  <link rel="shortcut icon" href="favicon1.ico">
+
+	<title>Neil's Website</title>
+
+	<!-- CSS -->
+	<!-- Bootstrap core CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+	<!-- Font Awesome CSS -->
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+
+	<!-- Elegant icons CSS -->
+	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+
+	<!--[if lte IE 7]>
+		<script src="assets/js/icons-lte-ie7.js"></script>
+	<![endif]-->
+
+	<!-- Magnific-popup lightbox -->
+	<link href="assets/css/magnific-popup.css" rel="stylesheet">
+
+	<!-- Owl Carousel -->
+	<link href="assets/css/owl.theme.css" rel="stylesheet">
+	<link href="assets/css/owl.carousel.css" rel="stylesheet">
+
+	<!-- Animate css -->
+	<link href="assets/css/animate.css" rel="stylesheet">
+
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+	<!-- Preloader -->
+
+	<div id="preloader">
+		<div id="status">
+			<div class="status-mes"></div>
+		</div>
+	</div>
+
+	<!-- Home start -->
+
+	<section id="home" class="module-image js-height-full">
+
+		<div class="intro">
+<!-- 			<div class="hello"></div> -->
+			<h1 class="wow fadeInUp" data-wow-delay=".1s">Neil Romana</h1>
+			<div class="wow fadeInUp who-creates" data-wow-delay=".2s">Software Engineer</div>
+		</div>
+
+		<div class="mouse-icon">
+			<div class="wheel"></div>
+		</div>
+
+	</section>
+
+	<!-- Home end -->
+
+	<!-- Navigation start -->
+
+	<header class="header">
+
+		<nav class="navbar navbar-custom" role="navigation">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Neil Romana</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+			</div><!-- .container -->
+
+		</nav>
+
+	</header>
+
+	<!-- Navigation end -->
+
+	<!-- About start -->
+
+	<section id="about">
+
+		<div class="row position-relative margin-0">
+
+			<div class="col-xs-12 col-md-6 side-image"></div>
+
+			<div class="col-xs-12 col-md-6 col-md-offset-6 side-image-text">
+
+				<div class="row">
+
+					<div class="col-sm-12">
+
+						<div class="module-header module-header-left wow fadeInUp">
+							<h2 class="module-title">About me</h2>
+							<div class="module-subtitle">
+								My name's Neil, but most of my friends call me Nicko. I love to construct applications that caters to user needs and wants. While I'm away from coding, I get off the grid to explore and seek great vistas through long backpacking, hiking, and camping trips.
+								<br />
+								As for now, I'm excited to contribute to a company that solves user dilemmas and that of which makes a greater impact on the society.
+							</div>
+							<div class="module-line"></div>
+						</div>
+
+					</div>
+
+				</div><!-- .row -->
+
+				<div class="row">
+
+					<div class="col-sm-6">
+
+						<div class="iconboxleft wow fadeInUp">
+							<div class="iconboxleft-icon">
+								<img src="assets/images/icon-js-34.png" />
+							</div>
+							<div class="iconboxleft-text">
+								<h3 class="iconboxleft-title">JavaScript</h3>
+								<div class="iconboxleft-desc">
+									This is my love and strongest suit. I'm completely blown away on the versatility of JavaScript, and its momentum in occupying the back-end. 
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-sm-6">
+
+						<div class="iconboxleft wow fadeInUp" data-wow-delay=".2s">
+							<div class="iconboxleft-icon">
+								<img src="assets/images/icon-react-32.png" />
+							</div>
+							<div class="iconboxleft-text">
+								<h3 class="iconboxleft-title">React.js</h3>
+								<div class="iconboxleft-desc">
+									A well worth investment in learning despite its steep learning curve in terms of setup. Now, I share the same excitement and rave on the growth of React.
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div><!-- .row -->
+
+				<div class="row">
+
+					<div class="col-sm-6">
+
+						<div class="iconboxleft wow fadeInUp">
+							<div class="iconboxleft-icon">
+								<img src="assets/images/icon-angular-36.png" />
+							</div>
+							<div class="iconboxleft-text">
+								<h3 class="iconboxleft-title">AngularJS</h3>
+								<div class="iconboxleft-desc">
+									My favorite front-end framework due to its effortless rendering of dynamic views. With the use of data binding, I love the automatic updating of the view once the model changes and vice versa. 
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-sm-6">
+
+						<div class="iconboxleft wow fadeInUp" data-wow-delay=".2s">
+							<div class="iconboxleft-icon">
+								<img src="assets/images/icon-node-36.png" />
+							</div>
+							<div class="iconboxleft-text">
+								<h3 class="iconboxleft-title">Node.js</h3>
+								<div class="iconboxleft-desc">
+									Most of my experience constructing the back-end is through the lighweight yet powerful Node.js. 
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div><!-- .row -->
+
+				<div class="row">
+
+					<div class="col-sm-6">
+
+						<div class="iconboxleft wow fadeInUp">
+							<div class="iconboxleft-icon">
+								<img src="assets/images/icon-html5-36.png" />
+							</div>
+							<div class="iconboxleft-text">
+								<h3 class="iconboxleft-title">HTML5</h3>
+								<div class="iconboxleft-desc">
+									HTML was the very first web technology that I have encountered when I was in 7th grade. To this day, the evolution of HTML is astonishing with its new elements, attributes, and behaviors packed in HTML5.
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-sm-6">
+
+						<div class="iconboxleft wow fadeInUp" data-wow-delay=".2s">
+							<div class="iconboxleft-icon">
+								<img src="assets/images/icon-css3-36.png" />
+							</div>
+							<div class="iconboxleft-text">
+								<h3 class="iconboxleft-title">CSS3</h3>
+								<div class="iconboxleft-desc">
+									I've also learned CSS at the same time as HTML. Likewise, the growth of CSS over the years has been remarkable to me. I love how CSS3 is also backwards-compatible with its earlier versions! 
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div><!-- .row -->
+
+			</div><!-- col-xs-12 -->
+
+		</div><!-- .row -->
+	</section>
+
+	<!-- About end -->
+	<!-- Portfolio start -->
+
+	<section id="portfolio" class="module paddingb-none">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="module-header wow fadeInUp">
+						<h2 class="module-title">My portfolio</h2>
+						<div class="module-line"></div>
+						<div class="module-subtitle">
+							Here are some of the applications that I've built utilizing tech stacks that covers the front-end and back-end
+						</div>
+						<div class="module-line"></div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+
+			<!-- Portfolio Filter start-->
+
+			<div class="row">
+
+				<div class="col-sm-12">
+
+					<ul id="filter">
+						<li class="active" data-group="all">All</li>
+						<li data-group="truescore">TrueScore</li>
+						<li data-group="viddate">Viddate</li>
+						<li data-group="songspace">songspace</li>
+					</ul>
+
+				</div>
+
+			</div><!-- .row -->
+
+			<!-- Portfolio Filter end -->
+
+		</div><!-- .contaier -->
+
+		<ul id="projects" class="portfolio-items-container">
+
+			<li id="spotlight" class="portfolio-item" data-groups="all truescore">
+				<div class="image">
+					<img src="assets/images/truescoregame.png" alt="">
+				</div>
+				<div class="content">
+					<h3>TrueScore</h3>
+					<p>A web application that utilizes pair-wise comparison voting to reveal user preferences</p>
+					<span>
+						<a href="https://true-score.herokuapp.com" target="_blank">Live-site</a> | 
+						<a href="https://github.com/StegoLego/truescore" target="_blank">Git Repo</a>
+					</span>
+				</div>
+			</li>
+
+			<li id="spotlight" class="portfolio-item" data-groups="all viddate">
+				<div class="image">
+					<img src="assets/images/viddate-signup-view.png" alt="">
+				</div>
+				<div class="content">
+					<h3>Viddate</h3>
+					<p>Real time video-speed dating app that matches users based on personal information and interests</p>
+					<span>
+						<a href="https://github.com/A-New-Scope/online-speed-dating" target="_blank">Git Repo</a>
+					</span>
+				</div>
+			</li>
+
+			<li id="spotlight" class="portfolio-item" data-groups="all songspace">
+				<div class="image">
+					<img src="assets/images/songspace-player-view.png" alt="">
+				</div>
+				<div class="content">
+					<h3>songspace</h3>
+					<p>3D music visualizer with a song and upload player</p>
+					<span>
+						<a href="https://github.com/A-New-Scope/A-New-Scope" target="_blank">Git Repo</a>
+					</span>
+				</div>
+			</li>
+
+		</ul><!-- .projects-container -->
+
+	</section>
+
+	<!-- Portfolio end -->
+
+	<!-- Callout start -->
+
+	<section class="callout">
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-8 col-lg-6 col-lg-offset-2">
+					<h2>Want to see my resume?</h2>
+				</div>
+
+				<div class="col-md-4 col-lg-2 callout-btn">
+					<a href="https://s3-us-west-1.amazonaws.com/nprwebsitefiles/Patrick+Romana.pdf" target="_blank" class="btn btn-lg btn-block btn-custom-1">Download Resume</a>
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+
+	<!-- Callout end -->
+
+	<!-- Contact start -->
+
+	<section id="contact" class="module">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="module-header">
+						<h2 class="module-title">Contact</h2>
+						<div class="module-line"></div>
+						<div class="module-subtitle">
+							Let's get in touch. Send me a message.
+						</div>
+						<div class="module-line"></div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<form id="contact-form" role="form">
+						<div class="ajax-hidden">
+							<div class="form-group wow fadeInUp">
+								<label class="sr-only" for="c_name">Name</label>
+								<input type="text" id="c_name" class="form-control" name="c_name" required placeholder="Name">
+							</div>
+
+							<div class="form-group wow fadeInUp" data-wow-delay=".1s">
+								<label class="sr-only" for="c_email">Email address</label>
+								<input type="email" id="c_email" class="form-control" name="c_email" required placeholder="E-mail">
+							</div>
+
+							<div class="form-group wow fadeInUp" data-wow-delay=".2s">
+                  <label class="sr-only" for="c_subject">Subject</label>
+                  <input type="text" id="c_subject" class="form-control" name="c_subject" required placeholder="Subject" />
+              </div>
+
+							<div class="form-group wow fadeInUp" data-wow-delay=".3s">
+								<textarea class="form-control" id="c_message" name="c_message" rows="7" required placeholder="Your message"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-block btn-custom-2 wow fadeInUp" data-wow-delay=".4s">Send it
+							</button>
+						</div>
+						<div class="ajax-response"></div>
+					</form>
+
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+
+	<!-- Contact end -->
+
+	<!-- Footer start -->
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-12">
+
+					<ul class="social-links">
+						<li><a href="https://www.linkedin.com/in/neilromana/" target="_blank" class="wow fadeInUp" data-wow-delay=".1s"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="https://github.com/npatrick" target="_blank" class="wow fadeInUp" data-wow-delay=".2s"><i class="fa fa-github"></i></a></li>
+						<li><a href="https://www.facebook.com/npromana" target="_blank" class="wow fadeInUp" data-wow-delay=".3s"><i class="fa fa-facebook"></i></a></li>
+					</ul>
+
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</footer>
+
+	<!-- Footer end -->
+
+	<!-- Scroll-up -->
+
+	<div class="scroll-up">
+		<a href="#home"><i class="fa fa-angle-double-up"></i></a>
+	</div>
+
+	<!-- Javascript files -->
+
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.js"></script>
+	<script src="assets/js/jquery.shuffle.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/jquery.fitvids.js"></script>
+	<script src="assets/js/jquery.sticky.js"></script>
+	<script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<!-- Custom scripts -->
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/custom-shuffle-init.js"></script>
+
+</body>
 </html>

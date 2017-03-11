@@ -540,12 +540,13 @@ textarea.form-control {
 
 .side-image {
 	position: absolute;
-	background: url(../images/about.jpg) scroll center no-repeat;
+	background: url(../images/selfpic.jpg) scroll left no-repeat;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	height: 100%;
+	height: 65%;
+	margin-top: 7%;
 }
 
 .side-image-text {
@@ -618,85 +619,102 @@ textarea.form-control {
 	margin: 0;
 }
 
-.portfolio-items-container .portfolio-item {
-	display: block;
-	list-style: none;
-	overflow: hidden;
-	width: 25%;
-	width: 33.333%;
-	padding: 0;
+.portfolio-items-container li {
+	margin-bottom: 5%;
+	margin-left: 5%;
 }
 
-.portfolio-items-container .portfolio-item img {
-	display: block;
-	width: 100%;
-	height: auto;
+#spotlight {
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex
 }
 
-.portfolio-items-container .portfolio-item {
--webkit-transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
--moz-transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
--ms-transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
--o-transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
-transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+#spotlight .image {
+    -moz-order: 1;
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+    border-radius: 0;
+    width: 40%
 }
 
-.portfolio-items-container .portfolio-item figcaption {
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	bottom: 8px;
-	left: 8px;
-	padding: 25px;
-	opacity: 0;
-	background: rgba(255,255,255,0.8);
-	text-align: center;
-	-webkit-transform: scale(1.1);
-	-moz-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	-o-transform: scale(1.1);
-	transform: scale(1.1);
+#spotlight .image img {
+    border-radius: 0;
+    width: 100%
 }
 
-.portfolio-items-container .portfolio-item a {
-	font-size: 0;
-	height: 100%;
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	text-indent: 200%;
-	top: 0;
-	width: 100%;
-	z-index: 1000;
+#spotlight .content {
+    padding: 0 4em .1em;
+    -moz-order: 2;
+    -webkit-order: 2;
+    -ms-order: 2;
+    order: 2;
+    max-width: 48em;
+    width: 60%
 }
 
-.portfolio-items-container .caption-inner {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 100%;
-	margin-top: -20px;
+#spotlight>p {
+    font-size: 30px;
+    line-height: 36px
 }
 
-.caption-inner .portfolio-item-title {
-	font-size: 14px;
-	font-weight: 400;
+.content>p {
+    font-size: 90%
 }
 
-.caption-inner .portfolio-item-desc {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-style: italic;
-	font-size: 13px;
-	color: #777;
+@media screen and (max-width: 1280px) {
+		.portfolio-items-container li {
+			margin-bottom: 0%;
+			margin-left: 0%;
+		}
+    #spotlight .image {
+        width:45%
+    }
+
+    #spotlight .content {
+        width: 55%
+    }
 }
 
-.portfolio-items-container .portfolio-item:hover figcaption {
-	opacity: 1;
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	-o-transform: scale(1);
-	transform: scale(1);
+@media screen and (max-width: 980px) {
+		.portfolio-items-container li {
+			margin-bottom: 0%;
+			margin-left: 0%;
+		}
+    #spotlight {
+        display:block
+    }
+
+    #spotlight br {
+        display: none
+    }
+
+    #spotlight .image {
+        width: 100%
+    }
+
+    #spotlight .content {
+        padding: 4em 3em 2em;
+        max-width: none;
+        text-align: center;
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 736px) {
+		.portfolio-items-container li {
+			margin-bottom: 0%;
+			margin-left: 0%;
+		}
+    #spotlight .content {
+        padding:3em 2em 1em
+    }
 }
 
 /* Ajax portfolio */
@@ -800,49 +818,8 @@ button.mfp-close {
 }
 
 /* ---------------------------------------------- /*
- * Twitter
+ * Contact
 /* ---------------------------------------------- */
-
-#twitter {
-	text-align: center;
-}
-
-.tweet {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-style: italic;
-	font-size: 16px;
-}
-
-.timePosted {
-	font: 400 13px/1.8 'Roboto Condensed', sans-serif;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	margin: 30px 0;
-	color: #777;
-}
-
-.interact {
-	margin: 0;
-}
-
-.interact a {
-	margin-right: 10px;
-}
-
-/* ---------------------------------------------- /*
- * Contact and Map
-/* ---------------------------------------------- */
-
-#map-section {
-	position: relative;
-	height: 450px;
-	width: 100%;
-}
-
-#map {
-	height: 450px;
-	width: 100%;
-}
 
 .ajax-response {
 	text-align: center;

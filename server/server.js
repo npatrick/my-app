@@ -21,12 +21,13 @@ const sendMail = require('./send_mail.js');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, '../build')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 const PORT = process.env.PORT || 3001;
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../build', 'index.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../public', 'index.html')));
 
+// recaptcha request
 app.post('/check', (req, res) => {
 	const userResponse = req.query['g-recaptcha-response'];
 
@@ -56,18 +57,18 @@ app.post('/sendemail', (req, res) => {
 	getOAuth2Client(function(err, oauth2Client) {
 	  if (err) {
 	    console.log('err:', err);
+	    res.status(500).send('Internal Server Error');
 	  } else {
 	    sendMail(name, emailaddress, subject, msg, oauth2Client, function(err, results) {
 	      if (err) {
 	        console.log('err: ', err);
 	      } else {
-	        console.log(results);
+	      	console.log('SERVER SIDE RESULT: ', results);
+	        res.status(200).send('Sent!');
 	      }
 	    });
 	  }
 	});
-
-	res.status(req.body ? 200 : 500).send('Message Sent!');
 });
 
 // pings the app every 15 mins
