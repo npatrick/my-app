@@ -1,5 +1,9 @@
 {
 	"root": "dist/",
 	"clean_urls": true,
-	"https_only": true
+	"https_only": true,
+	"routes": {
+    "/assets/*": "/assets/",
+    "/**": "index.html"
+  }
 }
