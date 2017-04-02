@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, '../build')));
 
 const PORT = process.env.PORT || 3001;
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../build', 'index.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../build')));
 
 app.post('/sendemail', (req, res) => {
 	console.log('POST COMING: ', req.body);

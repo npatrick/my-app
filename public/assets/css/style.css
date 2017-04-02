@@ -19,6 +19,18 @@ img {
 	height: auto;
 }
 
+video {
+	max-width: 100%;
+}
+/*MS Edge Only*/
+@supports (-ms-ime-align:auto) {
+    video {
+      height: initial;
+    }
+}
+/*FF only*/
+@-moz-document url-prefix() { video { height: initial; } }
+
 a {
 	color: #49e2d6;
 }
@@ -636,85 +648,111 @@ textarea.form-control {
 }
 
 #spotlight .image {
-    -moz-order: 1;
-    -webkit-order: 1;
-    -ms-order: 1;
-    order: 1;
-    border-radius: 0;
-    width: 40%
+  -moz-order: 1;
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+  border-radius: 0;
+  width: 40%
 }
 
 #spotlight .image img {
-    border-radius: 0;
-    width: 100%
+  border-radius: 0;
+  width: 100%
+}
+
+#spotlight .vid {
+  -moz-order: 1;
+  -webkit-order: 1;
+  -ms-order: 1;
+  order: 1;
+  border-radius: 0;
+	width: 40%;
+}
+
+#spotlight .vid video {
+  border-radius: 0;
+  width: 100%;
 }
 
 #spotlight .content {
-    padding: 0 4em .1em;
-    -moz-order: 2;
-    -webkit-order: 2;
-    -ms-order: 2;
-    order: 2;
-    max-width: 48em;
-    width: 60%
+  padding: 0 4em .1em;
+  -moz-order: 2;
+  -webkit-order: 2;
+  -ms-order: 2;
+  order: 2;
+  max-width: 48em;
+  width: 60%
 }
 
 #spotlight>p {
-    font-size: 30px;
-    line-height: 36px
+  font-size: 30px;
+  line-height: 36px
 }
 
 .content>p {
-    font-size: 90%
+  font-size: 90%
 }
 
 @media screen and (max-width: 1280px) {
-		.portfolio-items-container li {
-			margin-bottom: 0%;
-			margin-left: 0%;
-		}
-    #spotlight .image {
-        width:45%
-    }
+	video {
+		height: auto;
+	}
+	.portfolio-items-container li {
+		margin-bottom: 0%;
+		margin-left: 0%;
+	}
+  #spotlight .image {
+    width: 45%;
+  }
+  #spotlight .vid {
+  	width: 45%;
+  }
 
-    #spotlight .content {
-        width: 55%
-    }
+  #spotlight .content {
+    width: 55%;
+  }
 }
 
 @media screen and (max-width: 980px) {
-		.portfolio-items-container li {
-			margin-bottom: 0%;
-			margin-left: 0%;
-		}
-    #spotlight {
-        display:block
-    }
-
-    #spotlight br {
-        display: none
-    }
-
-    #spotlight .image {
-        width: 100%
-    }
-
-    #spotlight .content {
-        padding: 4em 3em 2em;
-        max-width: none;
-        text-align: center;
-        width: 100%
-    }
+	video {
+		height: auto;
+	}
+	.portfolio-items-container li {
+		margin-bottom: 0%;
+		margin-left: 0%;
+	}
+  #spotlight {
+    display:block
+  }
+  #spotlight br {
+    display: none
+  }
+  #spotlight .image {
+    width: 100%
+  }
+  #spotlight .vid {
+  	width: 100%;
+  }
+  #spotlight .content {
+    padding: 4em 3em 2em;
+    max-width: none;
+    text-align: center;
+    width: 100%
+  }
 }
 
 @media screen and (max-width: 736px) {
-		.portfolio-items-container li {
-			margin-bottom: 0%;
-			margin-left: 0%;
-		}
-    #spotlight .content {
-        padding:3em 2em 1em
-    }
+	video {
+		height: auto;
+	}
+	.portfolio-items-container li {
+		margin-bottom: 0%;
+		margin-left: 0%;
+	}
+  #spotlight .content {
+      padding:3em 2em 1em
+  }
 }
 
 /* Ajax portfolio */
