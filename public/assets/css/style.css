@@ -24,9 +24,9 @@ video {
 }
 /*MS Edge Only*/
 @supports (-ms-ime-align:auto) {
-    video {
-      height: initial;
-    }
+  video {
+    height: initial;
+  }
 }
 /*FF only*/
 @-moz-document url-prefix() { video { height: initial; } }
