@@ -2,7 +2,7 @@
 	var ImageDemo = (function($, imagesLoaded) {
 
 	var $projectsContainer = $('.portfolio-items-container'),
-		$imgs = $projectsContainer.find('img'),
+		$imgs = $projectsContainer.find('video', 'img'),
 		imgLoad,
 
 	init = function() {
