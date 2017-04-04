@@ -44,6 +44,15 @@ app.post('/sendemail', (req, res) => {
 	  }
 	});
 });
+// http://d3f55881babrh0.cloudfront.net/songspace-rec.mp4
+app.get('/songspace', (req, res) => {
+	res.status(200).sendFile(path.join(__dirname, '../build/assets/videos/songspace-rec.mp4'));
+});
+
+// http://d3f55881babrh0.cloudfront.net/truescore-rec.mp4
+app.get('/truescore', (req, res) => {
+	res.status(200).sendFile(path.join(__dirname, '../build/assets/videos/truescore-rec.mp4'));
+})
 
 // pings the app every 15 mins
 setInterval(() => http.get('http://www.neilromana.com'), 900000);
