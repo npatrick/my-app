@@ -285,7 +285,7 @@
 
 			<li id="spotlight" class="portfolio-item" data-groups="all truescore">
         <div id='vid'>
-        	<iframe width="585" height="353" src="http://d3f55881babrh0.cloudfront.net/truescore-rec.mp4" frameborder="0">
+        	<iframe id="scoreport" width="585" height="353" src="/truescore" frameborder="0">
         	</iframe>
         </div>
 				<div class="content">
@@ -300,7 +300,7 @@
 
       <li id="spotlight" class="portfolio-item" data-groups="all songspace">
         <div id="vid">
-        	<iframe class="songspace" width="563" height="353" src="http://d3f55881babrh0.cloudfront.net/songspace-rec.mp4" frameborder="0">
+        	<iframe id="vidport" width="563" height="353" src="/songspace" frameborder="0">
         	</iframe>
         </div>
         <div class="content">
@@ -456,6 +456,19 @@
 	<!-- Custom scripts -->
 	<script src="assets/js/custom.js"></script>
 	<script src="assets/js/custom-shuffle-init.js"></script>
+	<script type="text/javascript">
+		var frameViddate = document.getElementById('vidport');
+		var frameTruescore = document.getElementById('scoreport');
+		var scoreContent = frameTruescore.contentDocument.body.getElementsByTagName('video');
+		var viddateContent = frameViddate.contentDocument.body.getElementsByTagName('video');
+		$(scoreContent).attr('controls', false);
+		$(scoreContent).attr('loop', true);
+		$(scoreContent).prop('muted', true);
+		$(viddateContent).attr('controls', false);
+		$(viddateContent).attr('loop', true);
+		$(viddateContent).prop('muted', true);
+
+	</script>
 
 </body>
 </html>
