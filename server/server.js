@@ -15,6 +15,16 @@ const sendMail = require('./send_mail.js');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+
+if (process.env.NODE_ENV === 'production') {
+	app.use((req, res, next) => {
+		if (req.header('x-forwarded-proto') !== 'https')
+		res.redirect(`https://${req.header('host')}${req.url}`)
+		else
+		next()
+	})
+}
+
 app.use(express.static(path.join(__dirname, '../build')));
 
 const PORT = process.env.PORT || 3001;
@@ -55,6 +65,6 @@ app.get('/truescore', (req, res) => {
 })
 
 // pings the app every 15 mins
-setInterval(() => http.get('http://www.neilromana.com'), 900000);
+setInterval(() => http.get('https://www.neilromana.com'), 900000);
 
 app.listen(PORT, () => console.log('Listening on PORT 3001!'));
