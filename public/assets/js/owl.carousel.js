@@ -422,11 +422,11 @@ if (typeof Object.create !== "function") {
                 .append(base.buttonNext);
 
             buttonsWrapper.on("touchstart.owlControls mousedown.owlControls", "div[class^=\"owl\"]", function (event) {
-                event.preventDefault();
+                // event.preventDefault();
             });
 
             buttonsWrapper.on("touchend.owlControls mouseup.owlControls", "div[class^=\"owl\"]", function (event) {
-                event.preventDefault();
+                // event.preventDefault();
                 if ($(this).hasClass("owl-next")) {
                     base.next();
                 } else {
@@ -442,7 +442,7 @@ if (typeof Object.create !== "function") {
             base.owlControls.append(base.paginationWrapper);
 
             base.paginationWrapper.on("touchend.owlControls mouseup.owlControls", ".owl-page", function (event) {
-                event.preventDefault();
+                // event.preventDefault();
                 if (Number($(this).data("owl-page")) !== base.currentItem) {
                     base.goTo(Number($(this).data("owl-page")), true);
                 }

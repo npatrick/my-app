@@ -653,7 +653,7 @@ MagnificPopup.prototype = {
 		}
 		
 		if(e.type) {
-			e.preventDefault();
+			// e.preventDefault();
 
 			// This will prevent popup from closing if element is inside and popup is already opened
 			if(mfp.isOpen) {
@@ -2020,7 +2020,7 @@ $.magnificPopup.registerModule(RETINA_NS, {
 							return;
 						}
 						lock = true;
-						e.preventDefault();
+						// e.preventDefault();
 						clearTimeout(timeout);
 						timeout = setTimeout(function() {
 							lock = false;
