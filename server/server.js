@@ -65,6 +65,6 @@ app.get('/truescore', (req, res) => {
 })
 
 // pings the app every 15 mins
-setInterval(() => http.get('https://www.neilromana.com'), 900000);
+// setInterval(() => http.get('https://www.neilromana.com'), 900000);
 
 app.listen(PORT, () => console.log('Listening on PORT 3001!'));
